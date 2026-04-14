@@ -114,18 +114,61 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* --- GRID UNTUK KONSEP ASAS --- */
+/* --- GRID UNTUK KONSEP ASAS (DIPERBAHARUI) --- */
 .kandungan-konsep {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
 .kandungan-konsep h3 {
-    color: var(--primary-green);
+    color: var(--white);
+    background-color: var(--primary-green);
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.kandungan-konsep > div {
+    background: var(--light-green);
+    border-radius: 8px;
+    overflow: hidden;
+    border-left: 5px solid var(--primary-green);
+}
+
+.kandungan-konsep > div ul,
+.kandungan-konsep > div ol {
+    padding: 20px 20px;
+    margin: 0;
+}
+
+.kandungan-konsep li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.kandungan-konsep li:last-child {
+    margin-bottom: 0;
+}
+
+.kandungan-konsep blockquote {
+    background: var(--white);
+    border-left: 4px solid var(--primary-green);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    font-style: italic;
 }
 
 /* --- SENARAI ISU SEMASA --- */
+.senarai-isu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .senarai-isu li {
     background: var(--light-green);
     margin-bottom: 15px;
