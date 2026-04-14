@@ -274,26 +274,6 @@ button#kira-zakat:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.logo-zakat {
-    background-color: var(--primary-green);
-    width: auto; /* Ubah dari 45px */
-    height: 45px;
-    border-radius: 50px; /* Ubah dari 50% untuk rectangle dengan bulatan */
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Jarak antara logo dan teks */
-    padding: 0 15px; /* Padding horizontal */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.logo-text {
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
-}
-
 /* --- KEMAS KINI GRID KONSEP ASAS --- */
 .kandungan-konsep {
     display: grid;
