@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Zakat Sabah - Penilaian Akademik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Zakat<span>Sabah</span></div>
+            <ul>
+                <li><a href="#fiqh">Fiqh</a></li>
+                <li><a href="#isu">Isu Semasa</a></li>
+                <li><a href="#analisis">Analisis</a></li>
+                <li><a href="#kalkulator" class="btn-calc">Kalkulator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Memurnikan Harta, Menyantuni Asnaf</h1>
+            <p>Panduan Lengkap Zakat Negeri Sabah untuk Penilaian Akademik Kontemporari.</p>
+            <a href="#kalkulator" class="cta">Kira Zakat Sekarang</a>
+        </div>
+    </section>
+
+    <section id="fiqh" class="container">
+        <h2 class="section-title">Konsep Asas Fiqh</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Definisi & Dalil</h3>
+                <p>Zakat bermaksud suci dan tumbuh. Dalil: <em>"Ambilah zakat dari sebahagian harta mereka..."</em> (At-Taubah: 103).</p>
+            </div>
+            <div class="card">
+                <h3>Rukun Zakat</h3>
+                <ul>
+                    <li>Muzakki (Pemberi)</li>
+                    <li>Mal (Harta)</li>
+                    <li>Asnaf (Penerima)</li>
+                    <li>Niat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="isu" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">5 Isu Semasa Zakat</h2>
+            <div class="list-isu">
+                <div class="isu-item">1. Zakat Pendapatan (Mal al-Mustafad) di Sabah.</div>
+                <div class="isu-item">2. Zakat Aset Digital & Kripto.</div>
+                <div class="isu-item">3. Status Zakat Simpanan KWSP.</div>
+                <div class="isu-item">4. Isu Agihan Zakat Secara Langsung.</div>
+                <div class="isu-item">5. Penyucian Harta Syubhah.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analisis" class="container">
+        <h2 class="section-title">Analisis Fiqh & Penilaian</h2>
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Mazhab</th>
+                    <th>Pandangan</th>
+                    <th>Kritikal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Syafi'i</td>
+                    <td>Wajib tunggu Haul 1 tahun.</td>
+                    <td>Kekuatan: Ketelitian masa. Kelemahan: Lambat membantu asnaf.</td>
+                </tr>
+                <tr>
+                    <td>Kontemporari</td>
+                    <td>Zakat dikeluarkan semasa terima gaji.</td>
+                    <td>Tarjih: Digunakan di Sabah kerana lebih adil bagi pekerja bandar.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="kalkulator" class="calc-section">
+        <div class="container">
+            <h2 class="section-title">Kalkulator Zakat Pendapatan</h2>
+            <div class="calc-box">
+                <label>Gaji Bulanan (RM):</label>
+                <input type="number" id="gaji" placeholder="Contoh: 3500">
+                
+                <label>Had Kifayah (Tolakan Asas) (RM):</label>
+                <input type="number" id="tolakan" value="2000">
+                
+                <button onclick="kiraZakat()">Kira Zakat Bulanan</button>
+                
+                <div id="result" class="result-box">
+                    Keputusan: RM 0.00
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projek Penilaian Zakat Sabah - Universiti Malaysia Sabah.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
