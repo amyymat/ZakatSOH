@@ -8,7 +8,7 @@
     --white: #ffffff;
     --text-main: #2c3e50;
     --text-muted: #7f8c8d;
-    --shadow-premium: 0 15px 35px rgba(0,0,0,0.1);
+    --shadow-main: 0 15px 35px rgba(0,0,0,0.1);
     --shadow-card: 0 5px 15px rgba(0,0,0,0.05);
     --transition: all 0.4s ease-in-out;
 }
@@ -18,12 +18,12 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-color: var(--bg-light); line-height: 1.8; overflow-x: hidden; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-premium); }
+.card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-main); }
 .section-padded { padding: 100px 0; }
 .teks-arab { font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--primary-teal); margin-bottom: 10px; }
 .terjemahan { font-style: italic; color: var(--text-muted); }
 
-.btn { display: inline-block; padding: 12px 30px; border-radius: 30px; font-weight: 600; text-decoration: none; text-align: center; transition: var(--transition); }
+.btn { display: inline-block; padding: 12px 30px; border-radius: 30px; font-weight: 600; text-decoration: none; text-align: center; transition: var(--transition); cursor: pointer; }
 .btn-primary { background-color: var(--primary-teal); color: var(--white); }
 .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); }
 .btn-secondary { background-color: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold); }
@@ -36,7 +36,6 @@ body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-c
 .brand-group { display: flex; align-items: center; gap: 15px; }
 .site-title-group { display: flex; flex-direction: column; }
 .site-name { font-size: 1.4rem; font-weight: 700; color: var(--primary-teal); letter-spacing: 1px; line-height: 1.2; }
-/* Tagline baharu (Pacifico & Pop-out) */
 .site-tagline { font-family: 'Pacifico', cursive; color: var(--accent-gold); font-size: 1.2rem; letter-spacing: 1px; text-shadow: 1px 1px 2px rgba(0,0,0,0.15); line-height: 1.2; }
 
 .nav-links { list-style: none; display: flex; gap: 30px; }
@@ -58,40 +57,32 @@ body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-c
 .credit-soh p { font-size: 0.9rem; color: var(--accent-gold); letter-spacing: 1px; font-weight: 600; font-style: italic;}
 .credit-soh strong { font-size: 1.6rem; color: var(--white); font-weight: 800; font-style: normal; text-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 
-/* Konsep Asas & Nombor Bulatan Baru */
+/* Konsep Asas (3 Kolum Memanjang) */
 .concepts-section { background-color: var(--white); }
 .section-header { text-align: center; margin-bottom: 80px; }
 .section-header h2 { font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 10px; }
 .section-header p { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); letter-spacing: 1.5px; }
 
 .concepts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.concept-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); }
-.concept-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-premium); }
+.concept-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); display: flex; flex-direction: column;}
+.concept-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-main); }
 
-.concept-card .card-image { height: 180px; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.concept-card .card-image { height: 180px; background-size: cover; background-position: center; position: relative; overflow: hidden; flex-shrink: 0;}
 .concept-card.card-definitions .card-image { background-image: url('images/card-definitions.jpg'); }
 .concept-card.card-pillars .card-image { background-image: url('images/card-pillars.jpg'); }
 .concept-card.card-assets .card-image { background-image: url('images/card-assets.jpg'); }
 .concept-card .card-image::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.9) 0%, rgba(26, 188, 156, 0.7) 100%); opacity: 0.6; }
 
-.concept-card .card-body { padding: 30px; position: relative; }
-
-/* Bulatan Nombor Premium */
+.concept-card .card-body { padding: 30px; position: relative; height: 100%; }
 .card-badge { position: absolute; top: -30px; right: 30px; width: 60px; height: 60px; background-color: var(--accent-gold); color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; border: 4px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
 .concept-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
-.concept-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.7; height: 80px; overflow: hidden;}
-.concept-card .btn-card { background: none; border: none; cursor: pointer; color: var(--primary-teal); font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; transition: var(--transition); font-family: 'Poppins', sans-serif;}
-.concept-card .btn-card:hover { color: var(--accent-gold); }
+.concept-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.7; }
+.concept-card strong { color: var(--text-main); }
 
-/* Modal / Pop-up Styles */
-.modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px); align-items: center; justify-content: center; }
-.modal-content { background-color: var(--white); padding: 40px; border-radius: 20px; max-width: 600px; width: 90%; position: relative; animation: modalFadeIn 0.3s ease-out; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
-@keyframes modalFadeIn { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-.modal-content h3 { color: var(--primary-teal); margin-bottom: 20px; font-size: 1.5rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px; }
-.modal-content p, .modal-content li { margin-bottom: 15px; line-height: 1.8; color: var(--text-main); }
-.close-btn { position: absolute; top: 15px; right: 25px; font-size: 2rem; font-weight: bold; color: var(--text-muted); cursor: pointer; transition: 0.2s; }
-.close-btn:hover { color: var(--primary-dark); }
+/* Senarai Konsep dalam Kad */
+.senarai-konsep { padding-left: 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 15px; }
+.senarai-konsep li { margin-bottom: 8px; }
 
 /* Isu Semasa */
 .issues-section { position: relative; overflow: hidden; color: var(--white); background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.97) 0%, rgba(21, 67, 96, 0.9) 100%), url('images/bg-modern-issues.png'); background-size: cover; background-position: center; }
@@ -107,20 +98,20 @@ body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-c
 /* Analisis */
 .analysis-section { background-color: var(--white); position: relative; }
 .analysis-section::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg-fiqh-analysis.jpg'); background-size: cover; background-position: center; opacity: 0.03; }
-.table-card { position: relative; z-index: 1000; overflow: hidden; border-radius: 20px; box-shadow: var(--shadow-premium); border-top: 5px solid var(--primary-teal);}
+.table-card { position: relative; z-index: 1000; overflow: hidden; border-radius: 20px; box-shadow: var(--shadow-main); border-top: 5px solid var(--primary-teal);}
 .table-responsive { overflow-x: auto; }
-.premium-table { width: 100%; border-collapse: collapse; min-width: 800px; background: var(--white); }
-.premium-table th { background-color: var(--primary-teal); color: var(--white); padding: 25px 30px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; }
-.premium-table td { padding: 25px 30px; border-bottom: 1px solid rgba(0,0,0,0.03); color: var(--text-main); }
-.premium-table tr:hover { background-color: var(--bg-light); }
-.premium-table td strong { color: var(--primary-dark); }
-.premium-table .terjemahan { display: block; margin-top: 5px; font-size: 0.9rem; }
+.zakat-table { width: 100%; border-collapse: collapse; min-width: 800px; background: var(--white); }
+.zakat-table th { background-color: var(--primary-teal); color: var(--white); padding: 25px 30px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; }
+.zakat-table td { padding: 25px 30px; border-bottom: 1px solid rgba(0,0,0,0.03); color: var(--text-main); }
+.zakat-table tr:hover { background-color: var(--bg-light); }
+.zakat-table td strong { color: var(--primary-dark); }
+.zakat-table .terjemahan { display: block; margin-top: 5px; font-size: 0.9rem; }
 
 /* Penilaian */
 .verdict-section { background-color: var(--bg-light); }
 .verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .verdict-card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-card); text-align: center; border-top: 5px solid transparent; transition: var(--transition); }
-.verdict-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-premium); }
+.verdict-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-main); }
 .verdict-card.card-kekuatan { border-top: 5px solid var(--primary-teal); }
 .verdict-card.card-kelemahan { border-top: 5px solid var(--accent-gold); }
 .verdict-card.card-tarjih { border-top: 5px solid var(--primary-dark); }
