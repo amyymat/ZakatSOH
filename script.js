@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. ANIMASI SCROLL (INTERSECTION OBSERVER)
+    // 2. ANIMASI SCROLL KETIKA MEMBACA (INTERSECTION OBSERVER)
     const sections = document.querySelectorAll('.section-padded');
     sections.forEach(sec => sec.classList.add('scroll-animate'));
 
@@ -36,33 +36,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(sec => scrollObserver.observe(sec));
 
-    // 3. ANIMASI SMOOTH SCROLL (UNTUK BUTANG 'KIRA ZAKAT SEKARANG' & NAVIGASI)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // 3. FUNGSI KHAS: BUTANG 'KIRA ZAKAT SEKARANG' (HERO SECTION)
+    const btnHeroKalkulator = document.getElementById('butang-hero-kalkulator');
+    if (btnHeroKalkulator) {
+        btnHeroKalkulator.addEventListener('click', function (e) {
+            e.preventDefault(); // Halang browser melompat mengejut
+            const targetKalkulator = document.getElementById('kalkulator');
+            
+            if (targetKalkulator) {
+                // Offset -90 supaya tajuk kalkulator tidak tertutup oleh navbar di atas
+                const yOffset = -90; 
+                const y = targetKalkulator.getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // 4. FUNGSI SCROLL UNTUK MENU NAVIGASI DI ATAS
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            
             if (targetId === '#') return; 
             
             const targetSection = document.querySelector(targetId);
-            
             if (targetSection) {
-                const yOffset = -90; // Ruang navbar atas
+                const yOffset = -90; 
                 const y = targetSection.getBoundingClientRect().top + window.scrollY + yOffset;
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }
         });
     });
 
-    // 4. LOGIK KALKULATOR ZAKAT (DIKEMAS KINI UNTUK KLIK LANGSUNG)
+    // 5. LOGIK PENGIRAAN ZAKAT 
     const btnKiraZakat = document.getElementById('kira-zakat');
-    
     if(btnKiraZakat) {
         btnKiraZakat.addEventListener('click', function(e) {
-            // Elakkan browser daripada refresh page
             e.preventDefault(); 
 
-            // Ambil Nilai Input (Jika kosong, ia akan menjadi 0 secara automatik)
+            // Ambil Nilai Input 
             const gajiTahunan = parseFloat(document.getElementById('pendapatan-bulanan').value) || 0;
             const sampinganTahunan = parseFloat(document.getElementById('pendapatan-sampingan').value) || 0;
             const totalPendapatan = gajiTahunan + sampinganTahunan; 
