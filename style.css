@@ -1,226 +1,386 @@
-/* --- ASAS & FONT --- */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+/* =========================================
+   ASAS & FONT PREMIUM (POPPINS & AMIRI)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap');
 
 :root {
-    --primary-green: #27ae60;
-    --light-green: #eafaf1;
-    --dark-green: #145a32;
-    --text-main: #333333;
-    --bg-light: #f9fbf9;
+    --primary-teal: #1abc9c;    /* Premium Teal */
+    --primary-dark: #154360;    /* Deep Purple/Blue (Dari imej) */
+    --accent-gold: #f1c40f;    /* Gold/Orange Accent (Dari imej) */
+    --bg-light: #f4f7f6;
     --white: #ffffff;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    
+    --shadow-premium: 0 15px 35px rgba(0,0,0,0.1);
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.05);
+    
+    --transition: all 0.4s ease-in-out;
 }
 
-html { scroll-behavior: smooth; }
-
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-main);
     background-color: var(--bg-light);
-    margin: 0; padding: 0;
-    line-height: 1.6;
+    line-height: 1.8; overflow-x: hidden;
 }
 
-/* --- BAR NAVIGASI & LOGO --- */
-.navbar {
-    background-color: var(--white);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0; z-index: 1000;
-    padding: 15px 50px;
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-premium); }
+.section-padded { padding: 100px 0; }
+.teks-arab { font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--primary-teal); margin-bottom: 10px; }
+.terjemahan { font-style: italic; color: var(--text-muted); }
+
+/* Buttons Premium */
+.btn {
+    display: inline-block; padding: 12px 30px; border-radius: 30px; font-weight: 600;
+    text-decoration: none; text-align: center; transition: var(--transition);
 }
-
-.navbar nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Kumpulan SOH Logo Container */
-.brand-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-zakat {
-    background-color: var(--primary-green);
-    width: 45px; height: 45px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Gaya Khas Tulisan S.O.H (Lari dari tema hijau) */
-.team-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #d35400; /* Warna Oren Kontras/Emas Gelap */
-    font-family: 'Pacifico', cursive;
-}
-
-.soh-main {
-    font-size: 2.2rem;
-    line-height: 1;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.soh-sub {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.7rem;
-    line-height: 1.1;
-    letter-spacing: 1px;
-}
-
-/* Nav Links Asal */
-.nav-links {
-    list-style: none; display: flex; gap: 25px; margin: 0; padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none; color: var(--text-main); font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover { color: var(--primary-green); }
-
-/* Menu Hamburger (Tersembunyi pada Desktop) */
-.menu-toggle {
-    display: none; flex-direction: column; cursor: pointer; gap: 5px;
-}
-.menu-toggle .bar {
-    width: 25px; height: 3px; background-color: var(--dark-green);
-    border-radius: 3px; transition: all 0.3s ease;
-}
-
-/* --- SEKSYEN UTAMA (HERO) --- */
-.seksyen-utama {
-    background: linear-gradient(135deg, var(--light-green) 0%, #c8f7d5 100%);
-    text-align: center; padding: 100px 20px;
-    border-bottom: 5px solid var(--primary-green);
-}
-
-.seksyen-utama h1 { font-size: 3.5rem; color: var(--dark-green); margin-bottom: 20px; }
-
-.teks-arab {
-    font-family: 'Amiri', serif; font-size: 2.5rem;
-    color: var(--primary-green); margin: 15px 0; line-height: 1.8;
-}
-
-/* --- KAD & KANDUNGAN STRUKTUR --- */
-main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-
-.seksyen-info, .seksyen-kalkulator {
-    background: var(--white); border-radius: 15px; padding: 40px;
-    margin-bottom: 40px; box-shadow: var(--shadow);
-    border-top: 4px solid transparent; transition: transform 0.3s ease, border-top 0.3s ease;
-}
-
-.seksyen-info:hover {
-    transform: translateY(-5px); border-top: 4px solid var(--primary-green);
-}
-
-h2 {
-    color: var(--dark-green); font-size: 2rem;
-    border-bottom: 2px dashed var(--primary-green);
-    padding-bottom: 10px; margin-bottom: 30px;
-}
-
-/* --- GRID UNTUK KONSEP ASAS --- */
-.kandungan-konsep {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; align-items: start;
-}
-
-.kad-konsep {
-    background-color: var(--bg-light); padding: 0;
-    border-radius: 12px; border-left: 5px solid var(--primary-green);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; overflow: hidden;
-}
-
-.kad-konsep h3 {
-    color: var(--white); background-color: var(--primary-green);
-    padding: 15px 20px; margin: 0; font-size: 1.2rem; font-weight: 600;
-}
-
-.kad-konsep ul, .kad-konsep ol { padding: 20px 30px; margin: 0; }
-.kad-konsep li { margin-bottom: 12px; line-height: 1.7; }
-
-/* --- SENARAI ISU SEMASA --- */
-.senarai-isu { list-style: none; padding: 0; margin: 0; }
-.senarai-isu li {
-    background: var(--light-green); margin-bottom: 15px; padding: 20px;
-    border-radius: 10px; border-left: 5px solid var(--primary-green);
-}
-
-/* --- JADUAL ANALISIS FIQH --- */
-.table-responsive { overflow-x: auto; }
-.jadual-perbandingan { width: 100%; border-collapse: collapse; margin-top: 20px; min-width: 600px;}
-.jadual-perbandingan th { background-color: var(--primary-green); color: var(--white); padding: 15px; text-align: left; }
-.jadual-perbandingan td { padding: 15px; border-bottom: 1px solid #eee; }
-.jadual-perbandingan tr:hover { background-color: var(--light-green); }
-
-/* --- FORM KALKULATOR --- */
-fieldset {
-    border: 2px solid var(--light-green); border-radius: 10px;
-    padding: 20px; margin-bottom: 20px; background-color: #fafafa;
-}
-legend { background: var(--primary-green); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; }
-input[type="number"] {
-    width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #ccc;
-    border-radius: 8px; box-sizing: border-box; font-family: 'Poppins', sans-serif;
-}
-
-button#kira-zakat {
-    background-color: var(--primary-green); color: white; padding: 15px 30px;
-    font-size: 1.1rem; border: none; border-radius: 30px; cursor: pointer;
-    font-weight: bold; width: 100%; transition: background 0.3s ease, transform 0.2s ease;
-}
-button#kira-zakat:hover { background-color: var(--dark-green); transform: scale(1.02); }
-
-.footer-site {
-    text-align: center; padding: 30px; background-color: var(--dark-green);
-    color: var(--white); margin-top: 50px;
-}
-
-/* Animasi JS */
-.scroll-animate { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-.scroll-animate.terlihat { opacity: 1; transform: translateY(0); }
+.btn-primary { background-color: var(--primary-teal); color: var(--white); }
+.btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); }
+.btn-secondary { background-color: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold); }
+.btn-secondary:hover { background-color: var(--accent-gold); color: var(--primary-dark); transform: translateY(-3px); }
 
 /* =========================================
-   MEDIA QUERIES (UNTUK TELEFON PINTAR / HP)
+   1. NAVIGASI PREMIUM (FIXED & BLURRED)
    ========================================= */
-@media screen and (max-width: 768px) {
-    .navbar { padding: 15px 20px; }
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 2000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.navbar nav { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo Group */
+.brand-group { display: flex; align-items: center; gap: 15px; }
+.logo-site svg path[fill="#27ae60"] { fill: var(--primary-teal); } /* Ganti warna hijau lama */
+
+.site-title-group { display: flex; flex-direction: column; }
+.site-name { font-size: 1.4rem; font-weight: 700; color: var(--primary-teal); letter-spacing: 1.5px; }
+.site-tagline { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+/* Nav Links */
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a {
+    text-decoration: none; color: var(--primary-dark); font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 1px; transition: var(--transition);
+}
+.nav-links a:hover { color: var(--accent-gold); }
+
+/* Hamburger Menu (Mobile) */
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.menu-toggle .bar { width: 25px; height: 3px; background-color: var(--primary-teal); border-radius: 3px; transition: var(--transition); }
+
+/* =========================================
+   2. LAMAN UTAMA (HERO SECTION) DENGAN TANGAN
+   ========================================= */
+.hero-section {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
     
-    /* Navigasi Dropdown pada Mobile */
-    .menu-toggle { display: flex; }
+    /* GAMBAR TANGAN - Sila tukar nama fail */
+    background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.95) 0%, rgba(21, 67, 96, 0.8) 100%),
+                      url('images/hero-hands-paying.jpg');
+    background-size: cover; background-position: center;
+    position: relative; overflow: hidden;
+}
+
+/* Corak Geometri Overlay */
+.hero-section::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vdm9pZDAub3JnL3N2ZyI+PHBhdGggZD0iTTUwIDAgTDEwMCA1MCA1MCAxMDAgMCA1MFoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMDQiLz48L3N2Zz4=');
+    background-size: 50px; opacity: 0.1;
+}
+
+.hero-content { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+
+.hero-content .text-group { max-width: 800px; }
+.hero-content h1 { font-size: 5rem; font-weight: 800; color: var(--white); letter-spacing: 5px; margin-bottom: 20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.hero-content p { font-size: 1rem; font-weight: 400; letter-spacing: 2px; color: rgba(255,255,255,0.8); margin-bottom: 40px; }
+.hero-btns { display: flex; gap: 20px; justify-content: center; }
+
+/* Credit SOH Premium */
+.credit-soh { position: absolute; bottom: 30px; right: 30px; }
+.credit-soh p { font-size: 0.9rem; color: var(--accent-gold); letter-spacing: 1px; font-weight: 600; font-style: italic;}
+.credit-soh strong { font-size: 1.6rem; color: var(--white); font-weight: 800; font-style: normal; text-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+
+/* =========================================
+   3. SEKSYEN KONSEP ASAS (KAD GRID LAYOUT)
+   ========================================= */
+.concepts-section { background-color: var(--white); }
+
+.section-header { text-align: center; margin-bottom: 80px; }
+.section-header h2 { font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 10px; }
+.section-header p { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); letter-spacing: 1.5px; }
+
+/* Grid Modern */
+.concepts-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+}
+
+/* Card Modern */
+.concept-card {
+    background: var(--white); border-radius: 20px; overflow: hidden;
+    box-shadow: var(--shadow-card); transition: var(--transition);
+}
+.concept-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-premium); }
+
+.concept-card .card-image {
+    height: 180px; background-size: cover; background-position: center;
+    position: relative; overflow: hidden;
+}
+/* Gambar untuk setiap kad - Sila tukar nama fail */
+.concept-card.card-definitions .card-image { background-image: url('images/card-definitions.jpg'); }
+.concept-card.card-pillars .card-image { background-image: url('images/card-pillars.jpg'); }
+.concept-card.card-assets .card-image { background-image: url('images/card-assets.jpg'); }
+
+/* Card Image Tindihan (Overly) Modern */
+.concept-card .card-image::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.9) 0%, rgba(26, 188, 156, 0.7) 100%);
+    opacity: 0.6;
+}
+
+.concept-card .card-body { padding: 30px; position: relative; }
+
+/* Ikon Premium (Placeholder - Perlu Ikon Font Awesome) */
+.concept-card .card-icon {
+    position: absolute; top: -35px; right: 30px;
+    width: 70px; height: 70px; background-color: var(--primary-teal); color: var(--white);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    border: 5px solid var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-icon i { font-size: 1.8rem; }
+
+.concept-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+.concept-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.7; height: 80px; overflow: hidden;}
+.concept-card .btn-card {
+    text-decoration: none; color: var(--primary-teal); font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 1px; transition: var(--transition);
+}
+.concept-card .btn-card:hover { color: var(--accent-gold); }
+
+/* =========================================
+   4. SEKSYEN ISU SEMASA (MODERN VISUAL GRID)
+   ========================================= */
+.issues-section {
+    position: relative; overflow: hidden; color: var(--white);
+    
+    /* GAMBAR GRAFIK MODERN - Sila tukar nama fail */
+    background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.97) 0%, rgba(21, 67, 96, 0.9) 100%),
+                      url('images/bg-modern-issues.png');
+    background-size: cover; background-position: center;
+}
+
+.issues-section h2 { color: var(--white); }
+.issues-section .section-header p { color: rgba(255,255,255,0.7); }
+
+/* Grid Modern dengan Penomboran/Ikon */
+.issues-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+
+.issue-item {
+    background: rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 40px;
+    border-left: 5px solid var(--primary-teal); transition: var(--transition);
+}
+.issue-item:hover { background: rgba(255, 255, 255, 0.1); transform: translateX(10px); }
+
+/* Ikon Premium Isu */
+.issue-icon {
+    width: 60px; height: 60px; background-color: var(--primary-teal); color: var(--white);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.issue-icon i { font-size: 1.6rem; }
+
+.issue-item h3 { font-size: 1.1rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 15px; }
+.issue-item p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+
+/* =========================================
+   5. SEKSYEN ANALISIS FIQH (PREMIUM TABLE)
+   ========================================= */
+.analysis-section { background-color: var(--white); position: relative; }
+
+/* GAMBAR LATAR BELAKANG SEKSYEN - Sila tukar nama fail */
+.analysis-section::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('images/bg-fiqh-analysis.jpg');
+    background-size: cover; background-position: center; opacity: 0.03;
+}
+
+.table-card { position: relative; z-index: 1000; overflow: hidden; border-radius: 20px; box-shadow: var(--shadow-premium); border-top: 5px solid var(--primary-teal);}
+
+.table-responsive { overflow-x: auto; }
+.premium-table { width: 100%; border-collapse: collapse; min-width: 800px; background: var(--white); }
+
+/* Table Head Premium (Gaya Imej) */
+.premium-table th {
+    background-color: var(--primary-teal); color: var(--white);
+    padding: 25px 30px; text-align: left; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem;
+}
+
+.premium-table td { padding: 25px 30px; border-bottom: 1px solid rgba(0,0,0,0.03); color: var(--text-main); }
+.premium-table tr:last-child td { border-bottom: none; }
+.premium-table tr:hover { background-color: var(--bg-light); }
+.premium-table td strong { color: var(--primary-dark); }
+.premium-table .terjemahan { display: block; margin-top: 5px; font-size: 0.9rem; }
+
+/* =========================================
+   6. SEKSYEN PENILAIAN (MODERN CARDS)
+   ========================================= */
+.verdict-section { background-color: var(--bg-light); }
+
+.verdict-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+}
+
+.verdict-card {
+    background: var(--white); border-radius: 20px; padding: 40px;
+    box-shadow: var(--shadow-card); text-align: center;
+    border-top: 5px solid transparent; transition: var(--transition);
+}
+.verdict-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-premium); }
+
+.verdict-card.card-kekuatan { border-top: 5px solid var(--primary-teal); }
+.verdict-card.card-kelemahan { border-top: 5px solid var(--accent-gold); }
+.verdict-card.card-tarjih { border-top: 5px solid var(--primary-dark); }
+
+.verdict-card .card-icon {
+    width: 60px; height: 60px; background-color: rgba(0,0,0,0.03); color: var(--primary-dark);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 25px auto;
+}
+.verdict-card.card-kekuatan .card-icon { color: var(--primary-teal); }
+.verdict-card.card-kelemahan .card-icon { color: var(--accent-gold); }
+
+.verdict-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 15px; }
+.verdict-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+/* =========================================
+   7. SEKSYEN KALKULATOR (PREMIUM CALCULATOR)
+   ========================================= */
+.calculator-section {
+    position: relative; overflow: hidden;
+    /* GAMBAR LELAKI PROFESSIONAL - Sila tukar nama fail */
+    background-image: linear-gradient(135deg, rgba(21, 67, 96, 0.95) 0%, rgba(21, 67, 96, 0.8) 100%),
+                      url('images/bg-calculator.jpg');
+    background-size: cover; background-position: center; color: var(--white);
+}
+
+.calculator-section h2 { color: var(--white); }
+.calculator-section .section-header p { color: rgba(255,255,255,0.7); }
+
+.calculator-wrapper { background: var(--white); color: var(--text-main); border-radius: 20px; border-top: 5px solid var(--primary-teal); border-bottom: 5px solid var(--accent-gold); }
+
+/* Formula Card Premium */
+.formula-card { background-color: var(--bg-light); border-radius: 15px; padding: 25px; margin-bottom: 40px; text-align: center; border-left: 5px solid var(--accent-gold); }
+.formula-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px; }
+.paparan-matematik { font-family: 'Amiri', serif; font-size: 1.6rem; color: var(--primary-teal); }
+
+/* Form Premium Modern */
+.premium-form { }
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+
+fieldset { border: none; padding: 0; margin-bottom: 10px; }
+fieldset.fieldset-large { grid-column: 1 / -1; }
+legend { font-size: 0.9rem; font-weight: 600; color: var(--primary-teal); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 8px; }
+
+/* Input with Icon Modern */
+.input-icon-wrapper { position: relative; }
+.input-icon-wrapper input {
+    width: 100%; padding: 15px 15px 15px 50px; border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 1rem;
+    transition: var(--transition); background: #fafafa;
+}
+.input-icon-wrapper input:focus { border-color: var(--primary-teal); box-shadow: 0 5px 10px rgba(26,188,156,0.1); outline: none; background: var(--white);}
+.input-icon-wrapper .input-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-weight: 700; color: var(--text-muted); }
+
+/* Submit Wrapper Premium */
+.submit-wrapper { text-align: center; margin-top: 40px; }
+.btn-calculate {
+    background-color: var(--primary-teal); color: var(--white);
+    padding: 15px 50px; border-radius: 30px; font-weight: 700; font-size: 1.1rem;
+    letter-spacing: 1px; border: none; cursor: pointer; transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(26,188,156,0.2); width: 100%;
+}
+.btn-calculate:hover { background-color: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(21,67,96,0.3); }
+
+/* =========================================
+   8. FOOTER PREMIUM (TEAM BRANDING)
+   ========================================= */
+.footer-site {
+    background-color: var(--primary-dark); color: rgba(255,255,255,0.8);
+    padding: 60px 0; border-top: 5px solid var(--accent-gold);
+}
+
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+
+/* Footer Team Branding Modern */
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-brand .team-name { font-size: 3rem; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: 3px; margin-bottom: 10px; text-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.footer-brand .team-full { font-size: 0.9rem; color: var(--accent-gold); letter-spacing: 1px; font-style: italic; font-weight: 600; }
+
+.footer-details { text-align: right; max-width: 600px; }
+.footer-details p { font-size: 0.8rem; margin-bottom: 5px; }
+
+/* =========================================
+   9. RESPONSIVENESS (MEDIA QUERIES)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    html { font-size: 15px; }
+    .hero-content h1 { font-size: 4rem; }
+    .concepts-grid, .issues-grid, .verdict-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 768px) {
+    html { font-size: 14px; }
+    .container { padding: 0 15px; }
+    
+    /* Navigasi Mobile */
+    .menu-toggle { display: flex; z-index: 2000; }
     
     .nav-links {
-        position: absolute; top: 100%; left: 0; width: 100%;
-        background-color: var(--white); flex-direction: column;
-        gap: 0; text-align: center; box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-        max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+        position: fixed; top: 0; left: -100%; width: 100%; height: 100vh;
+        background-color: var(--primary-dark); flex-direction: column;
+        justify-content: center; align-items: center; gap: 40px;
+        transition: left 0.5s ease-in-out;
     }
     
-    .nav-links.aktif { max-height: 400px; } /* Kelas untuk JS */
+    .nav-links.aktif { left: 0; }
     
-    .nav-links li { border-bottom: 1px solid #eee; }
-    .nav-links li a { display: block; padding: 15px; }
-
-    /* Kecilkan Tulisan Utama */
-    .seksyen-utama h1 { font-size: 2rem; }
-    .teks-arab { font-size: 1.8rem; }
+    .nav-links li a { color: var(--white); font-size: 1.2rem; }
+    .nav-links li a:hover { color: var(--accent-gold); }
     
-    /* Kurangkan margin dan padding container utama */
-    .seksyen-info, .seksyen-kalkulator { padding: 25px 15px; }
-    h2 { font-size: 1.5rem; }
+    /* Hero Mobile */
+    .hero-content h1 { font-size: 3rem; letter-spacing: 2px; }
+    .hero-content p { font-size: 0.9rem; }
+    .hero-btns { flex-direction: column; gap: 15px; }
     
-    /* Penyesuaian Logo Pasukan supaya muat */
-    .soh-main { font-size: 1.8rem; }
-    .soh-sub { font-size: 0.6rem; }
+    /* Section Mobile */
+    .section-header h2 { font-size: 2rem; }
+    .concepts-grid, .issues-grid, .verdict-grid { grid-template-columns: 1fr; }
+    .verdict-grid { gap: 30px; }
+    
+    /* Footer Mobile */
+    .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+    .footer-details { text-align: center; }
 }
+
+/* Animasi untuk Intersection Observer - Dikekalkan */
+.scroll-animate { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.scroll-animate.terlihat { opacity: 1; transform: translateY(0); }
