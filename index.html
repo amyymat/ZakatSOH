@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakat Sabah</title>
+    <title>Zakat Sabah - Kumpulan S.O.H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
         <nav>
-            <div class="logo-zakat">
-                <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" fill="#27ae60" />
-                    <path d="M30 65 Q50 30 70 65 Z" fill="#ffffff" />
-                    <rect x="20" y="45" width="6" height="35" fill="#ffffff" />
-                    <polygon points="18,45 23,35 28,45" fill="#ffffff" />
-                    <rect x="74" y="45" width="6" height="35" fill="#ffffff" />
-                    <polygon points="72,45 77,35 82,45" fill="#ffffff" />
-                    <rect x="15" y="65" width="70" height="15" fill="#ffffff" rx="2" />
-                    <path d="M42 80 L42 70 Q50 60 58 70 L58 80 Z" fill="#27ae60" />
-                    <path d="M50 20 A 5 5 0 1 1 45 25 A 6 6 0 0 0 50 20 Z" fill="#ffffff" />
-                </svg>
+            <div class="brand-container">
+                <div class="logo-zakat">
+                    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#27ae60" />
+                        <path d="M30 65 Q50 30 70 65 Z" fill="#ffffff" />
+                        <rect x="20" y="45" width="6" height="35" fill="#ffffff" />
+                        <polygon points="18,45 23,35 28,45" fill="#ffffff" />
+                        <rect x="74" y="45" width="6" height="35" fill="#ffffff" />
+                        <polygon points="72,45 77,35 82,45" fill="#ffffff" />
+                        <rect x="15" y="65" width="70" height="15" fill="#ffffff" rx="2" />
+                        <path d="M42 80 L42 70 Q50 60 58 70 L58 80 Z" fill="#27ae60" />
+                        <path d="M50 20 A 5 5 0 1 1 45 25 A 6 6 0 0 0 50 20 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+                <div class="team-logo">
+                    <span class="soh-main">S.O.H</span>
+                    <div class="soh-sub">
+                        <span>Sepuloh</span>
+                        <span>Orang</span>
+                        <span>Hitam</span>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#utama">Utama</a></li>
                 <li><a href="#konsep-asas">Konsep Asas</a></li>
                 <li><a href="#isu-semasa">Isu Semasa</a></li>
@@ -48,7 +65,6 @@
 
         <section id="konsep-asas" class="seksyen-info">
             <h2>1. Konsep Asas Fiqh Zakat</h2>
-            
             <div class="kandungan-konsep">
                 <div class="kad-konsep">
                     <h3>Definisi</h3>
@@ -57,7 +73,6 @@
                         <li><strong>Istilah:</strong> Mengeluarkan sebahagian harta tertentu untuk diberikan kepada golongan tertentu (Asnaf) dengan syarat-syarat yang telah ditetapkan oleh syarak.</li>
                     </ul>
                 </div>
-
                 <div class="kad-konsep">
                     <h3>Rukun Zakat</h3>
                     <ol>
@@ -67,7 +82,6 @@
                         <li><strong>Niat:</strong> Membezakan ibadah dengan pemberian biasa.</li>
                     </ol>
                 </div>
-
                 <div class="kad-konsep">
                     <h3>Syarat Wajib Zakat</h3>
                     <ul>
@@ -78,15 +92,6 @@
                         <li><strong>Cukup Haul:</strong> Pemilikan genap setahun Hijriah (kecuali tanaman dan galian).</li>
                     </ul>
                 </div>
-
-                <div class="kad-konsep">
-                    <h3>Dalil</h3>
-                    <blockquote class="dalil-quran">
-                        <p class="teks-arab" dir="rtl" lang="ar">وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ</p>
-                        <p class="terjemahan">"Dan dirikanlah kamu akan sembahyang serta keluarkanlah zakat..."</p>
-                        <strong>(Surah Al-Baqarah: 43)</strong>
-                    </blockquote>
-                </div>
             </div>
         </section>
 
@@ -95,11 +100,11 @@
         <section id="isu-semasa" class="seksyen-info">
             <h2>2. 5 Isu Semasa Zakat di Sabah</h2>
             <ol class="senarai-isu">
-                <li><strong>Zakat Pendapatan (Mal al-Mustafad):</strong> Kewajipan zakat ke atas gaji, bonus, dan elaun yang menjadi perdebatan dalam kalangan penjawat awam dan swasta di Sabah mengenai kaedah potongan (sebelum atau selepas belanja asas).</li>
-                <li><strong>E-Commerce & Digital Assets:</strong> Status zakat bagi keuntungan daripada perniagaan TikTok Shop, Shopee, serta pelaburan mata wang kripto (Cryptocurrency) dan NFT yang kian popular di kalangan belia Sabah.</li>
-                <li><strong>Zakat Wang Simpanan KWSP:</strong> Polemik pengeluaran khas KWSP (seperti ketika pandemik atau skim terbaharu) dan bila masanya ia wajib dizakatkan—sama ada semasa dikeluarkan atau mengikut haul simpanan.</li>
-                <li><strong>Agihan Zakat Secara Langsung:</strong> Isu masyarakat yang memilih untuk memberi zakat terus kepada asnaf tanpa melalui MUIS, yang menyentuh aspek perundangan dan keberkesanan agihan sistematik.</li>
-                <li><strong>Penyucian Harta (Zakat Harta Syubhah):</strong> Bagaimana menguruskan harta daripada sumber yang meragukan atau tidak patuh syariah untuk tujuan pembersihan melalui Baitulmal MUIS.</li>
+                <li><strong>Zakat Pendapatan (Mal al-Mustafad):</strong> Kewajipan zakat ke atas gaji, bonus, dan elaun yang menjadi perdebatan...</li>
+                <li><strong>E-Commerce & Digital Assets:</strong> Status zakat bagi keuntungan daripada perniagaan TikTok Shop, Shopee...</li>
+                <li><strong>Zakat Wang Simpanan KWSP:</strong> Polemik pengeluaran khas KWSP dan bila masanya ia wajib dizakatkan...</li>
+                <li><strong>Agihan Zakat Secara Langsung:</strong> Isu masyarakat yang memilih untuk memberi zakat terus kepada asnaf...</li>
+                <li><strong>Penyucian Harta (Zakat Harta Syubhah):</strong> Bagaimana menguruskan harta daripada sumber yang meragukan...</li>
             </ol>
         </section>
 
@@ -109,64 +114,61 @@
             <h2>3. Analisis Fiqh Perbandingan</h2>
             <p><strong>Isu: Zakat Pendapatan (Gaji)</strong></p>
             
-            <table border="1" class="jadual-perbandingan">
-                <thead>
-                    <tr>
-                        <th>Mazhab</th>
-                        <th>Pandangan</th>
-                        <th>Dalil / Hujah</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Mazhab Syafi'i (Klasik)</strong></td>
-                        <td>Tidak wajib zakat secara langsung pada gaji kecuali jika disimpan sehingga cukup haul dan nisab.</td>
-                        <td>Mengambil hukum asal zakat simpanan yang memerlukan tempoh setahun (Haul).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mazhab Maliki, Hanbali, Hanafi (Sebahagian)</strong></td>
-                        <td>Terdapat konsep Mal al-Mustafad. Zakat boleh dikenakan sebaik sahaja harta diterima tanpa menunggu haul (mengikut sebahagian ulama mutaakhirin).</td>
-                        <td>
-                            Keumuman ayat:<br><br>
-                            <span class="teks-arab" dir="rtl" lang="ar" style="display:block;">يَا أَيُّهَا الَّذِينَ آمَنُوا أَنفِقُوا مِن طَيِّبَاتِ مَا كَسَبْتُمْ</span><br>
-                            "Wahai orang-orang yang beriman, infakkanlah sebahagian hasil usahamu yang baik..."<br>
-                            <strong>(Al-Baqarah: 267)</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Fatwa Kontemporari (Sabah/Kebangsaan)</strong></td>
-                        <td>Wajib dizakatkan berdasarkan konsep Mal al-Mustafad demi keadilan sosial antara petani dan pekerja profesional.</td>
-                        <td>Menqiyaskan pendapatan profesional dengan zakat pertanian (zakat dikeluarkan semasa tuaian/penerimaan).</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table border="1" class="jadual-perbandingan">
+                    <thead>
+                        <tr>
+                            <th>Mazhab</th>
+                            <th>Pandangan</th>
+                            <th>Dalil / Hujah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mazhab Syafi'i (Klasik)</strong></td>
+                            <td>Tidak wajib zakat secara langsung pada gaji kecuali jika disimpan sehingga cukup haul dan nisab.</td>
+                            <td>Mengambil hukum asal zakat simpanan yang memerlukan tempoh setahun (Haul).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mazhab Maliki, Hanbali, Hanafi (Sebahagian)</strong></td>
+                            <td>Zakat boleh dikenakan sebaik sahaja harta diterima tanpa menunggu haul.</td>
+                            <td>
+                                <span class="teks-arab" dir="rtl" lang="ar" style="display:block;">يَا أَيُّهَا الَّذِينَ آمَنُوا أَنفِقُوا مِن طَيِّبَاتِ مَا كَسَبْتُمْ</span><br>
+                                "Wahai orang-orang yang beriman, infakkanlah sebahagian hasil usahamu..."<br>
+                                <strong>(Al-Baqarah: 267)</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fatwa Kontemporari</strong></td>
+                            <td>Wajib dizakatkan berdasarkan konsep Mal al-Mustafad demi keadilan sosial.</td>
+                            <td>Menqiyaskan pendapatan profesional dengan zakat pertanian.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <hr>
 
         <section id="penilaian-kritikal" class="seksyen-info">
             <h2>4. Penilaian Kritikal</h2>
-            
             <div class="kandungan-penilaian">
                 <h3>Kekuatan Pandangan</h3>
-                <p>Mewajibkan zakat pendapatan memastikan golongan profesional (T20/M40) turut menyumbang kepada kelestarian ekonomi asnaf, berbanding hanya bergantung kepada zakat perniagaan atau simpanan yang kadangkala tidak mencapai nisab bagi individu tertentu.</p>
-
+                <p>Mewajibkan zakat pendapatan memastikan golongan profesional (T20/M40) turut menyumbang kepada kelestarian ekonomi asnaf...</p>
                 <h3>Kelemahan Pandangan</h3>
-                <p>Terdapat risiko bebanan berganda jika kaedah tolakan (had kifayah) tidak dikemas kini mengikut kos sara hidup semasa di Sabah yang semakin meningkat (contohnya kos logistik di pedalaman).</p>
-
+                <p>Terdapat risiko bebanan berganda jika kaedah tolakan (had kifayah) tidak dikemas kini mengikut kos sara hidup semasa di Sabah...</p>
                 <h3>Tarjih & Kaitan Masa Kini</h3>
-                <p>Di Sabah, pandangan yang mewajibkan zakat pendapatan (setelah ditolak perbelanjaan asas/had kifayah) adalah lebih Rajih (kuat) dan diamalkan. Ini kerana ia lebih relevan dalam sistem ekonomi moden di mana kekayaan tidak lagi hanya tertumpu pada pemilikan tanah atau ternakan, tetapi pada aliran tunai bulanan.</p>
+                <p>Di Sabah, pandangan yang mewajibkan zakat pendapatan adalah lebih Rajih (kuat) dan diamalkan...</p>
             </div>
         </section>
 
         <hr>
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
         <section id="kalkulator-zakat" class="seksyen-kalkulator">
             <h2>5. Elemen Inovasi: Kalkulator Zakat</h2>
-            
             <div class="formula-zakat">
                 <h3>Formula Asas</h3>
                 <p class="paparan-matematik">
@@ -175,46 +177,40 @@
             </div>
 
             <form id="form-kalkulator" action="#" method="POST">
-                
                 <fieldset>
                     <legend>Pendapatan</legend>
                     <label for="pendapatan-bulanan">Pendapatan Bulanan: (Gaji Pokok + Elaun Tetap)</label><br>
                     <input type="number" id="pendapatan-bulanan" name="pendapatan-bulanan" placeholder="RM"><br><br>
-
                     <label for="pendapatan-sampingan">Pendapatan Sampingan: (Bonus/Freelance/Sewa)</label><br>
                     <input type="number" id="pendapatan-sampingan" name="pendapatan-sampingan" placeholder="RM">
                 </fieldset>
 
                 <fieldset>
                     <legend>Tolakan (Had Kifayah MUIS)</legend>
-                    
                     <label for="diri-sendiri">Diri Sendiri (Contoh: RM9,000/setahun)</label><br>
                     <input type="number" id="diri-sendiri" name="diri-sendiri" value="9000"><br><br>
-
                     <label for="isteri">Isteri (Contoh: RM3,000/seorang)</label><br>
                     <input type="number" id="isteri" name="isteri" placeholder="Bilangan isteri x RM3000"><br><br>
-
                     <label for="anak">Anak (Contoh: RM1,500/seorang)</label><br>
                     <input type="number" id="anak" name="anak" placeholder="Bilangan anak x RM1500"><br><br>
-
                     <label for="kwsp">Caruman KWSP (11%)</label><br>
                     <input type="number" id="kwsp" name="kwsp" placeholder="Jumlah KWSP setahun">
                 </fieldset>
 
                 <fieldset>
                     <legend>Nisab Semasa</legend>
-                    <label for="nisab">Nisab (Auto-update berdasarkan nilai 85g emas semasa di Sabah):</label><br>
-                    <input type="number" id="nisab" name="nisab" placeholder="Nilai Nisab Semasa (RM)" readonly>
+                    <label for="nisab">Nisab (Berdasarkan 85g emas semasa di Sabah):</label><br>
+                    <input type="number" id="nisab" name="nisab" placeholder="Kadar Nisab (Contoh: 24000)" value="24000">
                 </fieldset>
 
                 <button type="submit" id="kira-zakat">Kira Zakat</button>
             </form>
         </section>
-
     </main>
 
     <footer class="footer-site">
         <p>&copy; AI40503 Fiqh Perbandingan - Sesi 2 2025/2026 - Universiti Malaysia Sabah</p>
+        <p style="font-family: 'Pacifico', cursive; color:#f39c12; margin-top:10px;">Dibangunkan oleh S.O.H (Sepuloh Orang Hitam)</p>
     </footer>
 
     <script src="script.js"></script>
