@@ -1,5 +1,5 @@
 /* --- ASAS & FONT --- */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
 
 :root {
     --primary-green: #27ae60;
@@ -11,26 +11,22 @@
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-html {
-    scroll-behavior: smooth; /* Sandaran untuk browser lama */
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-main);
     background-color: var(--bg-light);
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     line-height: 1.6;
 }
 
-/* --- BAR NAVIGASI --- */
+/* --- BAR NAVIGASI & LOGO --- */
 .navbar {
     background-color: var(--white);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     position: sticky;
-    top: 0;
-    z-index: 1000;
+    top: 0; z-index: 1000;
     padding: 15px 50px;
 }
 
@@ -42,265 +38,189 @@ body {
     margin: 0 auto;
 }
 
-.nav-links {
-    list-style: none;
+/* Kumpulan SOH Logo Container */
+.brand-container {
     display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-zakat {
+    background-color: var(--primary-green);
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Gaya Khas Tulisan S.O.H (Lari dari tema hijau) */
+.team-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d35400; /* Warna Oren Kontras/Emas Gelap */
+    font-family: 'Pacifico', cursive;
+}
+
+.soh-main {
+    font-size: 2.2rem;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.soh-sub {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+/* Nav Links Asal */
+.nav-links {
+    list-style: none; display: flex; gap: 25px; margin: 0; padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 600;
+    text-decoration: none; color: var(--text-main); font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-green);
+.nav-links a:hover { color: var(--primary-green); }
+
+/* Menu Hamburger (Tersembunyi pada Desktop) */
+.menu-toggle {
+    display: none; flex-direction: column; cursor: pointer; gap: 5px;
+}
+.menu-toggle .bar {
+    width: 25px; height: 3px; background-color: var(--dark-green);
+    border-radius: 3px; transition: all 0.3s ease;
 }
 
 /* --- SEKSYEN UTAMA (HERO) --- */
 .seksyen-utama {
     background: linear-gradient(135deg, var(--light-green) 0%, #c8f7d5 100%);
-    text-align: center;
-    padding: 100px 20px;
+    text-align: center; padding: 100px 20px;
     border-bottom: 5px solid var(--primary-green);
 }
 
-.seksyen-utama h1 {
-    font-size: 3.5rem;
-    color: var(--dark-green);
-    margin-bottom: 20px;
-}
+.seksyen-utama h1 { font-size: 3.5rem; color: var(--dark-green); margin-bottom: 20px; }
 
-/* --- TULISAN ARAB --- */
 .teks-arab {
-    font-family: 'Amiri', serif;
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin: 15px 0;
-    line-height: 1.8;
+    font-family: 'Amiri', serif; font-size: 2.5rem;
+    color: var(--primary-green); margin: 15px 0; line-height: 1.8;
 }
 
-/* --- KAD & KANDUNGAN STRUKTUR (WOW FACTOR) --- */
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
+/* --- KAD & KANDUNGAN STRUKTUR --- */
+main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
 .seksyen-info, .seksyen-kalkulator {
-    background: var(--white);
-    border-radius: 15px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: var(--shadow);
-    border-top: 4px solid transparent;
-    transition: transform 0.3s ease, border-top 0.3s ease;
+    background: var(--white); border-radius: 15px; padding: 40px;
+    margin-bottom: 40px; box-shadow: var(--shadow);
+    border-top: 4px solid transparent; transition: transform 0.3s ease, border-top 0.3s ease;
 }
 
 .seksyen-info:hover {
-    transform: translateY(-5px);
-    border-top: 4px solid var(--primary-green);
+    transform: translateY(-5px); border-top: 4px solid var(--primary-green);
 }
 
 h2 {
-    color: var(--dark-green);
-    font-size: 2rem;
+    color: var(--dark-green); font-size: 2rem;
     border-bottom: 2px dashed var(--primary-green);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    padding-bottom: 10px; margin-bottom: 30px;
 }
 
-/* --- GRID UNTUK KONSEP ASAS (DIPERBAHARUI) --- */
-.kandungan-konsep
-
-.kandungan-konsep h3 {
-    color: var(--white);
-    background-color: var(--primary-green);
-    padding: 15px 20px;
-    margin: 0;
-    border-radius: 8px 8px 0 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.kandungan-konsep > div {
-    background: var(--light-green);
-    border-radius: 8px;
-    overflow: hidden;
-    border-left: 5px solid var(--primary-green);
-}
-
-.kandungan-konsep > div ul,
-.kandungan-konsep > div ol {
-    padding: 20px 20px;
-    margin: 0;
-}
-
-.kandungan-konsep li {
-    margin-bottom: 12px;
-    line-height: 1.7;
-}
-
-.kandungan-konsep li:last-child {
-    margin-bottom: 0;
-}
-
-.kandungan-konsep blockquote {
-    background: var(--white);
-    border-left: 4px solid var(--primary-green);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    font-style: italic;
-}
-
-/* --- SENARAI ISU SEMASA --- */
-.senarai-isu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.senarai-isu li {
-    background: var(--light-green);
-    margin-bottom: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid var(--primary-green);
-}
-
-/* --- JADUAL ANALISIS FIQH --- */
-.jadual-perbandingan {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.jadual-perbandingan th {
-    background-color: var(--primary-green);
-    color: var(--white);
-    padding: 15px;
-    text-align: left;
-}
-
-.jadual-perbandingan td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.jadual-perbandingan tr:hover {
-    background-color: var(--light-green);
-}
-
-/* --- FORM KALKULATOR --- */
-fieldset {
-    border: 2px solid var(--light-green);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fafafa;
-}
-
-legend {
-    background: var(--primary-green);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-button#kira-zakat {
-    background-color: var(--primary-green);
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button#kira-zakat:hover {
-    background-color: var(--dark-green);
-    transform: scale(1.02);
-}
-
-/* --- FOOTER --- */
-.footer-site {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--dark-green);
-    color: var(--white);
-    margin-top: 50px;
-}
-
-/* --- KELAS ANIMASI (JAVASCRIPT AKAN GUNAKAN INI) --- */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.scroll-animate.terlihat {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- KEMAS KINI LOGO --- */
-.logo-zakat {
-    background-color: var(--primary-green);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* --- KEMAS KINI GRID KONSEP ASAS --- */
+/* --- GRID UNTUK KONSEP ASAS --- */
 .kandungan-konsep {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    align-items: start;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; align-items: start;
 }
 
 .kad-konsep {
-    background-color: var(--bg-light);
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 5px solid var(--primary-green);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    height: 100%;
-    box-sizing: border-box;
+    background-color: var(--bg-light); padding: 0;
+    border-radius: 12px; border-left: 5px solid var(--primary-green);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; overflow: hidden;
 }
 
 .kad-konsep h3 {
-    color: var(--dark-green);
-    margin-top: 0;
+    color: var(--white); background-color: var(--primary-green);
+    padding: 15px 20px; margin: 0; font-size: 1.2rem; font-weight: 600;
 }
 
-.dalil-penuh {
-    grid-column: 1 / -1;
-    background-color: var(--light-green);
-    border-left: none;
-    border-top: 5px solid var(--primary-green);
-    text-align: center;
+.kad-konsep ul, .kad-konsep ol { padding: 20px 30px; margin: 0; }
+.kad-konsep li { margin-bottom: 12px; line-height: 1.7; }
+
+/* --- SENARAI ISU SEMASA --- */
+.senarai-isu { list-style: none; padding: 0; margin: 0; }
+.senarai-isu li {
+    background: var(--light-green); margin-bottom: 15px; padding: 20px;
+    border-radius: 10px; border-left: 5px solid var(--primary-green);
+}
+
+/* --- JADUAL ANALISIS FIQH --- */
+.table-responsive { overflow-x: auto; }
+.jadual-perbandingan { width: 100%; border-collapse: collapse; margin-top: 20px; min-width: 600px;}
+.jadual-perbandingan th { background-color: var(--primary-green); color: var(--white); padding: 15px; text-align: left; }
+.jadual-perbandingan td { padding: 15px; border-bottom: 1px solid #eee; }
+.jadual-perbandingan tr:hover { background-color: var(--light-green); }
+
+/* --- FORM KALKULATOR --- */
+fieldset {
+    border: 2px solid var(--light-green); border-radius: 10px;
+    padding: 20px; margin-bottom: 20px; background-color: #fafafa;
+}
+legend { background: var(--primary-green); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; }
+input[type="number"] {
+    width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #ccc;
+    border-radius: 8px; box-sizing: border-box; font-family: 'Poppins', sans-serif;
+}
+
+button#kira-zakat {
+    background-color: var(--primary-green); color: white; padding: 15px 30px;
+    font-size: 1.1rem; border: none; border-radius: 30px; cursor: pointer;
+    font-weight: bold; width: 100%; transition: background 0.3s ease, transform 0.2s ease;
+}
+button#kira-zakat:hover { background-color: var(--dark-green); transform: scale(1.02); }
+
+.footer-site {
+    text-align: center; padding: 30px; background-color: var(--dark-green);
+    color: var(--white); margin-top: 50px;
+}
+
+/* Animasi JS */
+.scroll-animate { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.scroll-animate.terlihat { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   MEDIA QUERIES (UNTUK TELEFON PINTAR / HP)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    
+    /* Navigasi Dropdown pada Mobile */
+    .menu-toggle { display: flex; }
+    
+    .nav-links {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background-color: var(--white); flex-direction: column;
+        gap: 0; text-align: center; box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    }
+    
+    .nav-links.aktif { max-height: 400px; } /* Kelas untuk JS */
+    
+    .nav-links li { border-bottom: 1px solid #eee; }
+    .nav-links li a { display: block; padding: 15px; }
+
+    /* Kecilkan Tulisan Utama */
+    .seksyen-utama h1 { font-size: 2rem; }
+    .teks-arab { font-size: 1.8rem; }
+    
+    /* Kurangkan margin dan padding container utama */
+    .seksyen-info, .seksyen-kalkulator { padding: 25px 15px; }
+    h2 { font-size: 1.5rem; }
+    
+    /* Penyesuaian Logo Pasukan supaya muat */
+    .soh-main { font-size: 1.8rem; }
+    .soh-sub { font-size: 0.6rem; }
 }
