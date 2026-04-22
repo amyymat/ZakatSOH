@@ -1,19 +1,3 @@
-// FUNGSI UNTUK MODAL (POP-UP)
-function bukaModal(modalId) {
-    document.getElementById(modalId).style.display = 'flex';
-}
-
-function tutupModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-}
-
-// Tutup modal jika pengguna klik kawasan luar kotak
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. FUNGSI MENU MUDAH ALIH (HAMBURGER MENU)
@@ -53,10 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(sec => scrollObserver.observe(sec));
 
     // 3. ANIMASI SMOOTH SCROLL (TERMASUK BUTANG HERO)
+    // Logik baharu yang lebih stabil untuk memastikan butang Hero tidak tersekat
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            
+            // Mengelak jika href hanya "#"
+            if (targetId === '#') return; 
+            
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
