@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inovasi Zakat - Panduan Fiqh & Kalkulator Premium</title>
+    <title>Inovasi Zakat - Panduan Fiqh & Kalkulator</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -73,8 +73,8 @@
                         <div class="card-body">
                             <div class="card-badge">1</div>
                             <h3>DEFINISI ZAKAT</h3>
-                            <p>Bahasa: Berasal daripada perkataan Zaka yang bermaksud suci, tumbuh, berkat...</p>
-                            <button onclick="bukaModal('modal-definisi')" class="btn-card">BACA SEPENUHNYA</button>
+                            <p><strong>Bahasa:</strong> Berasal daripada perkataan <em>Zaka</em> yang bermaksud suci, tumbuh, berkat, dan terpuji.</p>
+                            <p><strong>Istilah:</strong> Mengeluarkan sebahagian harta tertentu untuk diberikan kepada golongan tertentu (Asnaf) dengan syarat-syarat yang telah ditetapkan oleh syarak.</p>
                         </div>
                     </div>
                     <div class="concept-card card-pillars">
@@ -82,8 +82,12 @@
                         <div class="card-body">
                             <div class="card-badge">2</div>
                             <h3>RUKUN ZAKAT</h3>
-                            <p>Terdapat empat rukun utama: Pemberi Zakat (Muzakki), Harta Zakat (Mal)...</p>
-                            <button onclick="bukaModal('modal-rukun')" class="btn-card">BACA SEPENUHNYA</button>
+                            <ol class="senarai-konsep">
+                                <li><strong>Pemberi Zakat:</strong> Individu yang memenuhi kriteria.</li>
+                                <li><strong>Harta Zakat:</strong> Harta yang wajib dizakatkan.</li>
+                                <li><strong>Penerima:</strong> 8 golongan asnaf (At-Taubah: 60).</li>
+                                <li><strong>Niat:</strong> Membezakan ibadah dengan pemberian biasa.</li>
+                            </ol>
                         </div>
                     </div>
                     <div class="concept-card card-assets">
@@ -91,54 +95,23 @@
                         <div class="card-body">
                             <div class="card-badge">3</div>
                             <h3>SYARAT WAJIB ZAKAT</h3>
-                            <p>Kriteria untuk mewajibkan zakat: Islam, Merdeka, Milik Sempurna, Cukup Nisab...</p>
-                            <button onclick="bukaModal('modal-syarat')" class="btn-card">BACA SEPENUHNYA</button>
+                            <ul class="senarai-konsep">
+                                <li><strong>Islam:</strong> Diwajibkan ke atas Muslim.</li>
+                                <li><strong>Merdeka:</strong> Bukan hamba sahaya.</li>
+                                <li><strong>Milik Sempurna:</strong> Harta di bawah kawalan penuh.</li>
+                                <li><strong>Cukup Nisab:</strong> Nilai minimum (85g emas).</li>
+                                <li><strong>Cukup Haul:</strong> Pemilikan genap setahun Hijriah.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div id="modal-definisi" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="tutupModal('modal-definisi')">&times;</span>
-                <h3>Definisi Zakat</h3>
-                <p><strong>Bahasa:</strong> Berasal daripada perkataan <em>Zaka</em> yang bermaksud suci, tumbuh, berkat, dan terpuji.</p>
-                <p><strong>Istilah:</strong> Mengeluarkan sebahagian harta tertentu untuk diberikan kepada golongan tertentu (Asnaf) dengan syarat-syarat yang telah ditetapkan oleh syarak.</p>
-            </div>
-        </div>
-
-        <div id="modal-rukun" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="tutupModal('modal-rukun')">&times;</span>
-                <h3>Rukun Zakat</h3>
-                <ol style="padding-left: 20px;">
-                    <li><strong>Pemberi Zakat (Muzakki):</strong> Individu yang memenuhi kriteria.</li>
-                    <li><strong>Harta Zakat (Mal):</strong> Harta yang wajib dizakatkan.</li>
-                    <li><strong>Penerima Zakat (Asnaf):</strong> 8 golongan yang layak menerima (Berdasarkan Surah At-Taubah: 60).</li>
-                    <li><strong>Niat:</strong> Membezakan ibadah dengan pemberian biasa.</li>
-                </ol>
-            </div>
-        </div>
-
-        <div id="modal-syarat" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="tutupModal('modal-syarat')">&times;</span>
-                <h3>Syarat Wajib Zakat</h3>
-                <ul style="padding-left: 20px;">
-                    <li><strong>Islam:</strong> Hanya diwajibkan ke atas individu Muslim.</li>
-                    <li><strong>Merdeka:</strong> Bukan hamba sahaya.</li>
-                    <li><strong>Milik Sempurna:</strong> Harta berada di bawah kawalan penuh dan mutlak pemegang.</li>
-                    <li><strong>Cukup Nisab:</strong> Paras minimum harta (bersamaan nilai 85 gram emas semasa).</li>
-                    <li><strong>Cukup Haul:</strong> Pemilikan genap setahun Hijriah (kecuali bagi tanaman dan galian).</li>
-                </ul>
-            </div>
-        </div>
-
         <section id="isu" class="section-padded issues-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Isu Semasa Moden</h2>
+                    <h2>Isu Semasa</h2>
                     <p>5 ISU SEMASA ZAKAT DI SABAH YANG ANDA PERLU TAHU</p>
                 </div>
                 <div class="issues-grid">
@@ -180,7 +153,7 @@
                 
                 <div class="table-card">
                     <div class="table-responsive">
-                        <table border="0" class="premium-table">
+                        <table border="0" class="zakat-table">
                             <thead>
                                 <tr>
                                     <th>Mazhab</th>
@@ -243,7 +216,7 @@
         <section id="kalkulator" class="section-padded calculator-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Elemen Inovasi: Kalkulator Zakat Premium</h2>
+                    <h2>Kalkulator Zakat</h2>
                     <p>FORMULA MODEN & HAD KIFAYAH SABAH</p>
                 </div>
 
@@ -255,7 +228,7 @@
                         </p>
                     </div>
 
-                    <form id="form-kalkulator" class="premium-form">
+                    <form id="form-kalkulator" class="zakat-form">
                         <div class="form-grid">
                             <fieldset class="fieldset-large">
                                 <legend>PENDAPATAN (Sila isikan jumlah tahunan)</legend>
@@ -320,7 +293,7 @@
                         </div>
 
                         <div class="submit-wrapper">
-                            <button type="submit" id="kira-zakat" class="btn-calculate">Kira Zakat Premium</button>
+                            <button type="submit" id="kira-zakat" class="btn-calculate">Kira Zakat</button>
                         </div>
                     </form>
                 </div>
