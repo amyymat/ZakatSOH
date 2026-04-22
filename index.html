@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZAKAT SABAH - Panduan Fiqh & Kalkulator Premium - S.O.H</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <title>Inovasi Zakat - Panduan Fiqh & Kalkulator Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -15,18 +15,17 @@
         <nav class="container">
             <div class="brand-group">
                 <div class="logo-site">
-                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 0 L100 50 L50 100 L0 50 Z" fill="#ffffff" opacity="0.1"/>
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
-                        <path d="M30 65 Q50 30 70 65 Z" fill="#ffffff" />
+                    <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#154360"/> 
+                        <path d="M30 65 Q50 30 70 65 Z" fill="#f1c40f" /> 
                         <rect x="20" y="45" width="6" height="35" fill="#ffffff" />
                         <rect x="74" y="45" width="6" height="35" fill="#ffffff" />
-                        <path d="M42 80 L42 70 Q50 60 58 70 L58 80 Z" fill="#27ae60" />
+                        <path d="M42 80 L42 70 Q50 60 58 70 L58 80 Z" fill="#1abc9c" />
                     </svg>
                 </div>
                 <div class="site-title-group">
-                    <span class="site-name">ZAKAT SABAH</span>
-                    <span class="site-tagline">Panduan Fiqh Zakat</span>
+                    <span class="site-name">INOVASI ZAKAT</span>
+                    <span class="site-tagline">Sepuloh Orang Hitam</span>
                 </div>
             </div>
 
@@ -37,111 +36,145 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#concepts">CONCEPTS</a></li>
-                <li><a href="#issues">CURRENT ISSUES</a></li>
-                <li><a href="#analysis">ANALYSIS</a></li>
-                <li><a href="#calculator">CALCULATOR</a></li>
+                <li><a href="#utama">UTAMA</a></li>
+                <li><a href="#konsep">KONSEP</a></li>
+                <li><a href="#isu">ISU SEMASA</a></li>
+                <li><a href="#analisis">ANALISIS</a></li>
+                <li><a href="#kalkulator">KALKULATOR</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
+        <section id="utama" class="hero-section">
             <div class="hero-content container">
                 <div class="text-group">
                     <h1>ZAKAT & FIQH</h1>
-                    <p>PANDUAN KOMPREHENSIVE UNTUK CABARAN MODERN DI SABAH</p>
+                    <p>PANDUAN KOMPREHENSIF UNTUK CABARAN MODEN DI SABAH</p>
                     <div class="hero-btns">
-                        <a href="#concepts" class="btn btn-primary">LEARN MORE</a>
-                        <a href="#calculator" class="btn btn-secondary">CALCULATE ZAKAT</a>
+                        <a href="#kalkulator" class="btn btn-secondary">KIRA ZAKAT SEKARANG</a>
                     </div>
                 </div>
                 <div class="credit-soh">
                     <p>Dibangunkan oleh <strong>S.O.H</strong></p>
                 </div>
             </div>
-            </section>
+        </section>
 
-        <section id="concepts" class="section-padded concepts-section">
+        <section id="konsep" class="section-padded concepts-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Our Mission: Islamic Fundamentals</h2>
+                    <h2>Misi Kami: Asas Fiqh Islam</h2>
                     <p>KONSEP ASAS, RUKUN, DAN SYARAT WAJIB ZAKAT</p>
                 </div>
                 <div class="concepts-grid">
                     <div class="concept-card card-definitions">
                         <div class="card-image" style="background-image: url('images/card-definitions.jpg');"></div>
                         <div class="card-body">
-                            <div class="card-icon"><i class="icon-quran"></i></div>
+                            <div class="card-badge">1</div>
                             <h3>DEFINISI ZAKAT</h3>
-                            <p>Bahasa: Berasal daripada perkataan Zaka yang bermaksud suci, tumbuh, berkat, dan terpuji.
-                               Istilah: Mengeluarkan sebahagian harta tertentu untuk diberikan kepada golongan tertentu (Asnaf)...</p>
-                            <a href="#" class="btn-card">READ MORE</a>
+                            <p>Bahasa: Berasal daripada perkataan Zaka yang bermaksud suci, tumbuh, berkat...</p>
+                            <button onclick="bukaModal('modal-definisi')" class="btn-card">BACA SEPENUHNYA</button>
                         </div>
                     </div>
                     <div class="concept-card card-pillars">
                         <div class="card-image" style="background-image: url('images/card-pillars.jpg');"></div>
                         <div class="card-body">
-                            <div class="card-icon"><i class="icon-pillars"></i></div>
+                            <div class="card-badge">2</div>
                             <h3>RUKUN ZAKAT</h3>
-                            <p>Terdapat empat rukun utama: 1) Pemberi Zakat (Muzakki), 2) Harta Zakat (Mal), 3) Penerima Zakat (Asnaf), 4) Niat.</p>
-                            <a href="#" class="btn-card">READ MORE</a>
+                            <p>Terdapat empat rukun utama: Pemberi Zakat (Muzakki), Harta Zakat (Mal)...</p>
+                            <button onclick="bukaModal('modal-rukun')" class="btn-card">BACA SEPENUHNYA</button>
                         </div>
                     </div>
                     <div class="concept-card card-assets">
                         <div class="card-image" style="background-image: url('images/card-assets.jpg');"></div>
                         <div class="card-body">
-                            <div class="card-icon"><i class="icon-family"></i></div>
+                            <div class="card-badge">3</div>
                             <h3>SYARAT WAJIB ZAKAT</h3>
-                            <p>Kriteria untuk mewajibkan zakat: 1) Islam, 2) Merdeka, 3) Milik Sempurna, 4) Cukup Nisab (paras minimum harta setara 85g emas), 5) Cukup Haul.</p>
-                            <a href="#" class="btn-card">READ MORE</a>
+                            <p>Kriteria untuk mewajibkan zakat: Islam, Merdeka, Milik Sempurna, Cukup Nisab...</p>
+                            <button onclick="bukaModal('modal-syarat')" class="btn-card">BACA SEPENUHNYA</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="issues" class="section-padded issues-section">
+        <div id="modal-definisi" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="tutupModal('modal-definisi')">&times;</span>
+                <h3>Definisi Zakat</h3>
+                <p><strong>Bahasa:</strong> Berasal daripada perkataan <em>Zaka</em> yang bermaksud suci, tumbuh, berkat, dan terpuji.</p>
+                <p><strong>Istilah:</strong> Mengeluarkan sebahagian harta tertentu untuk diberikan kepada golongan tertentu (Asnaf) dengan syarat-syarat yang telah ditetapkan oleh syarak.</p>
+            </div>
+        </div>
+
+        <div id="modal-rukun" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="tutupModal('modal-rukun')">&times;</span>
+                <h3>Rukun Zakat</h3>
+                <ol style="padding-left: 20px;">
+                    <li><strong>Pemberi Zakat (Muzakki):</strong> Individu yang memenuhi kriteria.</li>
+                    <li><strong>Harta Zakat (Mal):</strong> Harta yang wajib dizakatkan.</li>
+                    <li><strong>Penerima Zakat (Asnaf):</strong> 8 golongan yang layak menerima (Berdasarkan Surah At-Taubah: 60).</li>
+                    <li><strong>Niat:</strong> Membezakan ibadah dengan pemberian biasa.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="modal-syarat" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="tutupModal('modal-syarat')">&times;</span>
+                <h3>Syarat Wajib Zakat</h3>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Islam:</strong> Hanya diwajibkan ke atas individu Muslim.</li>
+                    <li><strong>Merdeka:</strong> Bukan hamba sahaya.</li>
+                    <li><strong>Milik Sempurna:</strong> Harta berada di bawah kawalan penuh dan mutlak pemegang.</li>
+                    <li><strong>Cukup Nisab:</strong> Paras minimum harta (bersamaan nilai 85 gram emas semasa).</li>
+                    <li><strong>Cukup Haul:</strong> Pemilikan genap setahun Hijriah (kecuali bagi tanaman dan galian).</li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="isu" class="section-padded issues-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Modern Issues</h2>
+                    <h2>Isu Semasa Moden</h2>
                     <p>5 ISU SEMASA ZAKAT DI SABAH YANG ANDA PERLU TAHU</p>
                 </div>
                 <div class="issues-grid">
                     <div class="issue-item">
-                        <div class="issue-icon"><i class="icon-salary"></i></div>
-                        <h3>1. ZAKAT PENDAPATAN (Mal al-Mustafad)</h3>
+                        <div class="issue-badge">1</div>
+                        <h3>ZAKAT PENDAPATAN (Mal al-Mustafad)</h3>
                         <p>Kewajipan zakat ke atas gaji, bonus, dan elaun yang menjadi perdebatan hangat, terutama bagi mereka yang menerima pendapatan yang besar dan berterusan.</p>
                     </div>
                     <div class="issue-item">
-                        <div class="issue-icon"><i class="icon-digital"></i></div>
-                        <h3>2. E-COMMERCE & DIGITAL ASSETS</h3>
-                        <p>Status zakat bagi keuntungan daripada perniagaan TikTok Shop, Shopee, kriptowang, dan token digital.</p>
+                        <div class="issue-badge">2</div>
+                        <h3>E-COMMERCE & ASET DIGITAL</h3>
+                        <p>Status zakat bagi keuntungan daripada perniagaan TikTok Shop, Shopee, mata wang kripto, dan token digital (NFT).</p>
                     </div>
                     <div class="issue-item">
-                        <div class="issue-icon"><i class="icon-kwsp"></i></div>
-                        <h3>3. ZAKAT WANG SIMPANAN KWSP</h3>
-                        <p>Polemik pengeluaran khas KWSP dan bila masanya ia wajib dizakatkan.</p>
+                        <div class="issue-badge">3</div>
+                        <h3>ZAKAT WANG SIMPANAN KWSP</h3>
+                        <p>Polemik pengeluaran khas KWSP dan bilakah masa yang tepat ia diwajibkan untuk dizakatkan.</p>
                     </div>
                     <div class="issue-item">
-                        <div class="issue-icon"><i class="icon-direct"></i></div>
-                        <h3>4. AGIHAN ZAKAT SECARA LANGSUNG</h3>
-                        <p>Isu masyarakat yang memilih untuk memberi zakat terus kepada asnaf tanpa melalui amil bertauliah.</p>
+                        <div class="issue-badge">4</div>
+                        <h3>AGIHAN ZAKAT SECARA LANGSUNG</h3>
+                        <p>Isu masyarakat yang memilih untuk memberi zakat terus kepada asnaf tanpa melalui amil bertauliah atau baitulmal.</p>
                     </div>
                     <div class="issue-item">
-                        <div class="issue-icon"><i class="icon-purity"></i></div>
-                        <h3>5. PENYUCIAN HARTA (Harta Syubhah)</h3>
-                        <p>Bagaimana menguruskan harta daripada sumber yang meragukan, riba, atau pelaburan yang tidak patuh syariah.</p>
+                        <div class="issue-badge">5</div>
+                        <h3>PENYUCIAN HARTA (Harta Syubhah)</h3>
+                        <p>Bagaimana menguruskan harta daripada sumber yang meragukan, riba, atau pelaburan tidak patuh syariah.</p>
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
 
-        <section id="analysis" class="section-padded analysis-section">
+        <section id="analisis" class="section-padded analysis-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Analysis & Verdict: Zakat Pendapatan</h2>
+                    <h2>Analisis & Resolusi: Zakat Pendapatan</h2>
                     <p>ANALISIS FIQH PERBANDINGAN PENDAPATAN PROFESIONAL</p>
                 </div>
                 
@@ -171,48 +204,47 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Fatwa Kontemporari</strong></td>
+                                    <td><strong>Fatwa Kontemporari (Sabah)</strong></td>
                                     <td>Wajib dizakatkan berdasarkan konsep Mal al-Mustafad demi keadilan sosial.</td>
-                                    <td>Menqiyaskan pendapatan profesional dengan zakat pertanian (bayar bila tuai).</td>
-                                }
+                                    <td>Menqiyaskan pendapatan profesional moden dengan zakat pertanian (bayar semasa terima hasil).</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
 
-        <section id="verdict" class="section-padded verdict-section">
+        <section class="section-padded verdict-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Penilaian Kritikal & Tarjih</h2>
                 </div>
                 <div class="verdict-grid">
                     <div class="verdict-card card-kekuatan">
-                        <div class="card-icon"><i class="icon-strength"></i></div>
+                        <div class="card-badge-small">+</div>
                         <h3>Kekuatan Pandangan</h3>
                         <p>Mewajibkan zakat pendapatan memastikan golongan profesional (T20/M40) turut menyumbang kepada kelestarian ekonomi asnaf secara berterusan.</p>
                     </div>
                     <div class="verdict-card card-kelemahan">
-                        <div class="card-icon"><i class="icon-weakness"></i></div>
+                        <div class="card-badge-small">-</div>
                         <h3>Kelemahan Pandangan</h3>
                         <p>Terdapat risiko bebanan berganda jika kaedah tolakan (had kifayah) tidak dikemas kini mengikut kos sara hidup semasa di Sabah, terutama bagi M40.</p>
                     </div>
                     <div class="verdict-card card-tarjih">
-                        <div class="card-icon"><i class="icon-verdict"></i></div>
-                        <h3>Tarjih & Kaitan Masa Kini</h3>
-                        <p>Di Sabah, pandangan yang mewajibkan zakat pendapatan adalah lebih Rajih (kuat) dan diamalkan, didorong oleh keperluan asnaf dan keadilan sosial.</p>
+                        <div class="card-badge-small">✓</div>
+                        <h3>Tarjih & Kesimpulan</h3>
+                        <p>Di Sabah, pandangan mewajibkan zakat pendapatan adalah lebih Rajih (kuat) dan diamalkan secara rasmi, didorong oleh keperluan asnaf dan tuntutan keadilan sosial moden.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="calculator" class="section-padded calculator-section">
+        <section id="kalkulator" class="section-padded calculator-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Elemen Inovasi: Kalkulator Zakat Premium</h2>
-                    <p>FORMULA MODERN & HAD KIFAYAH SABAH</p>
+                    <p>FORMULA MODEN & HAD KIFAYAH SABAH</p>
                 </div>
 
                 <div class="calculator-wrapper card">
@@ -228,16 +260,16 @@
                             <fieldset class="fieldset-large">
                                 <legend>PENDAPATAN (Sila isikan jumlah tahunan)</legend>
                                 <div class="form-group">
-                                    <label for="pendapatan-bulanan">Pendapatan Bulanan: (Gaji Pokok + Elaun Tetap)</label>
+                                    <label for="pendapatan-bulanan">Pendapatan Tahunan: (Gaji Pokok + Elaun x 12)</label>
                                     <div class="input-icon-wrapper">
-                                        <input type="number" id="pendapatan-bulanan" name="pendapatan-bulanan" placeholder="RM (Gaji x 12)" required>
+                                        <input type="number" id="pendapatan-bulanan" name="pendapatan-bulanan" placeholder="Sila masukkan jumlah gaji setahun (RM)" required>
                                         <span class="input-icon">RM</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pendapatan-sampingan">Pendapatan Sampingan: (Bonus/Freelance/Sewa)</label>
+                                    <label for="pendapatan-sampingan">Pendapatan Sampingan: (Bonus/Freelance/Sewa Tahunan)</label>
                                     <div class="input-icon-wrapper">
-                                        <input type="number" id="pendapatan-sampingan" name="pendapatan-sampingan" placeholder="RM (Bonus + Sewa)" required>
+                                        <input type="number" id="pendapatan-sampingan" name="pendapatan-sampingan" placeholder="Sila masukkan jumlah sampingan (RM)" required>
                                         <span class="input-icon">RM</span>
                                     </div>
                                 </div>
@@ -253,23 +285,23 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="isteri">Isteri (Contoh: RM3,000/seorang)</label>
+                                    <label for="isteri">Isteri (Sila masukkan jumlah: Bil isteri x RM3000)</label>
                                     <div class="input-icon-wrapper">
-                                        <input type="number" id="isteri" name="isteri" placeholder="Bilangan isteri x RM3000" required>
+                                        <input type="number" id="isteri" name="isteri" placeholder="RM" required>
                                         <span class="input-icon">RM</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="anak">Anak (Contoh: RM1,500/seorang)</label>
+                                    <label for="anak">Anak (Sila masukkan jumlah: Bil anak x RM1500)</label>
                                     <div class="input-icon-wrapper">
-                                        <input type="number" id="anak" name="anak" placeholder="Bilangan anak x RM1500" required>
+                                        <input type="number" id="anak" name="anak" placeholder="RM" required>
                                         <span class="input-icon">RM</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="kwsp">Caruman KWSP (11% setahun)</label>
                                     <div class="input-icon-wrapper">
-                                        <input type="number" id="kwsp" name="kwsp" placeholder="Jumlah KWSP setahun" required>
+                                        <input type="number" id="kwsp" name="kwsp" placeholder="RM" required>
                                         <span class="input-icon">RM</span>
                                     </div>
                                 </div>
@@ -293,7 +325,7 @@
                     </form>
                 </div>
             </div>
-            </section>
+        </section>
     </main>
 
     <footer class="footer-site">
