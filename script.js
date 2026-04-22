@@ -36,14 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(sec => scrollObserver.observe(sec));
 
-    // 3. ANIMASI SMOOTH SCROLL (TERMASUK BUTANG HERO)
-    // Logik baharu yang lebih stabil untuk memastikan butang Hero tidak tersekat
+    // 3. ANIMASI SMOOTH SCROLL (UNTUK BUTANG 'KIRA ZAKAT SEKARANG' & NAVIGASI)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             
-            // Mengelak jika href hanya "#"
             if (targetId === '#') return; 
             
             const targetSection = document.querySelector(targetId);
@@ -56,13 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. LOGIK KALKULATOR ZAKAT
-    const formKalkulator = document.getElementById('form-kalkulator');
-    if(formKalkulator) {
-        formKalkulator.addEventListener('submit', function(e) {
+    // 4. LOGIK KALKULATOR ZAKAT (DIKEMAS KINI UNTUK KLIK LANGSUNG)
+    const btnKiraZakat = document.getElementById('kira-zakat');
+    
+    if(btnKiraZakat) {
+        btnKiraZakat.addEventListener('click', function(e) {
+            // Elakkan browser daripada refresh page
             e.preventDefault(); 
 
-            // Ambil Input
+            // Ambil Nilai Input (Jika kosong, ia akan menjadi 0 secara automatik)
             const gajiTahunan = parseFloat(document.getElementById('pendapatan-bulanan').value) || 0;
             const sampinganTahunan = parseFloat(document.getElementById('pendapatan-sampingan').value) || 0;
             const totalPendapatan = gajiTahunan + sampinganTahunan; 
@@ -78,7 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const nisabSemasa = parseFloat(document.getElementById('nisab').value) || 24000;
 
-            if (baki >= nisabSemasa) {
+            // Pengiraan dan Paparan Keputusan
+            if (totalPendapatan === 0) {
+                alert("Sila masukkan jumlah pendapatan tahunan anda terlebih dahulu.");
+            } else if (baki >= nisabSemasa) {
                 jumlahZakat = baki * 0.025;
                 alert(`Berdasarkan maklumat anda:\n\nPendapatan Tahunan: RM ${totalPendapatan.toFixed(2)}\nJumlah Tolakan (Had Kifayah MUIS): RM ${totalTolakan.toFixed(2)}\nBaki Layak DiZakatkan: RM ${baki.toFixed(2)}\n\nJUMLAH ZAKAT WAJIB DIBAYAR (2.5%): RM ${jumlahZakat.toFixed(2)}`);
             } else if (baki > 0 && baki < nisabSemasa) {
